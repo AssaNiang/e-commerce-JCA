@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-panier.css">
+    <title>Panier</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="header-ruban">
+            <p> Ruban informatif (optionel)</p>
+        </div>
+
+        <div class="header-nav flex">
+            <a href="index.html">
+                <img class="logo" src="images/Logo_ACJ-rose.png" alt="logo accueil">
+            </a>
+
+            <nav class="nav-menu flex">
+                <a href="#">Catégories</a>
+                <a href="#">A propos</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <nav class="nav-icons flex">
+                <a href="#"><img src="images\icon-loupe-blanc.png" alt="icon recherche"></a>
+                <a href="#"><img src="images\icon-user-blanc.png" alt="icon compte"></a>
+                <a href="#"><img src="images\icon-coeur-blanc.png" alt="icon wishlist"></a>
+                <a href="#"><img src="images\icon-panier-blanc.png" alt="icon panier"></a>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <main>
+
+
+        <section id="panier-livraison" class="flex blue">
+            <div id="bloc-panier">
+
+                <h2>MON PANIER</h2>
+
+                <div class="sous-bloc-panier flex">
+
+                    <img class="image-article" src="images/pantalon-large/khaki.webp"
+                        alt="">
+                    <div class="bloc-description-prix flex column">
+                        <div class="description-article">
+                            <p>Nom de l'article</p>
+                            <br>
+                            <p>Description de l'article, 100% coton, matiere naturelle.</p>
+                        </div>
+
+                        <div class="prix">
+                            <p class="prix-veste">80€</p>
+                            <a href="#">Supprimer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="bloc-livraison">
+
+                <h2>LIVRAISON</h2>
+
+                <div class="sous-bloc-livraison flex column">
+                    <div class="etape-modalites flex column">
+                        <div class="flex">
+                            <form>
+                                <input class="checkbox-livraison" type="checkbox">
+                                <label type="text">Modalités</label>
+                            </form>
+                        </div>
+
+                        <a href="paiement.html">
+                            <button class="bouton-commander">COMMANDER</button>
+                        </a>
+
+                    </div>
+                    <div>
+                        <a href="#page-categorie">Continuez à shopper</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="promo-total" class="blue">
+            <div class="code-promo">
+                <h3>Code promo</h3>
+                <form class="flex">
+                    <input type="text">
+                    <button type="submit">APPLIQUER</button>
+                </form>
+            </div>
+
+            <hr>
+
+            <div id="montant-panier">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Sous-total</td>
+                            <td>125€</td>
+                        </tr>
+                        <tr>
+                            <td>Livraison</td>
+                            <td>10€</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>135€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- FOOTER  -->
+    <footer class="blue">
+
+        <div class="footer-top">
+
+            <div class="footer-newsletter">
+
+                <h3>Newsletter</h3>
+                <p>Rejoignez notre communauté:</p>
+
+                <div class="footer-input flex">
+                    <input type="email" placeholder="Entrez votre adresse email"></input>
+                    <button type="submit">OK</button>
+                </div>
+            </div>
+
+            <div class="footer-legal">
+                <h3>Légal</h3>
+                <nav class="nav-legal">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">CGU-CGV</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Politique de cookies</a>
+                </nav>
+            </div>
+
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <nav class="nav-bottom-menu">
+                    <a href="#">Accueil</a>
+                    <a href="#">Catégories</a>
+                    <a href="#">A propos</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="flex reseaux">
+                <a href="#">
+                    <img src="images/icone-twitter-rose.png" alt="icone twitter">
+                </a>
+                <a href="#">
+                    <img src="images/icone-ins-rose.png" alt="icone instagram">
+                </a>
+                <a href="#">
+                    <img src="images/icone-snap-rose.png" alt="icone snapchat">
+                </a>
+                <a href="#">
+                    <img src="images/icone-fb-rose.png" alt="icone facebook">
+                </a>
+            </div>
+
+            <img src="images/Paiement-Sécurisé-3CB.png" alt="icons moyens de paiement disponibles">
+            <br>
+            <h3>Copyright © 2022</h3>
+        </div>
+
+    </footer>
+</body>
+
+</html>

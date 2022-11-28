@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="categorie-pantalon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Catégorie Pantalons</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    
+    <header class="flex-header">
+        <a href="index.html"><img class="logo menu-desktop" src="images/JAC_logo.png" alt="logo JAC"></a>
+        <nav class="menu-desktop flex-header">
+            <a href=""><img src="images/icone recherche.png" alt="icone de recherche"></a>
+            <a href="TouteCategorie.html">Catégories</a>
+            <a href="#">A propos</a>
+            <a href="#">Contact</a>
+            <a href="#"><img class="icone-compte" src="images/icone mon compte.png" alt="icone de compte"></a>
+            <a href="#"><img class="icone-coeur" src="images/icone coeur.png" alt="icone de wishlist"></a>
+            <a href="panier.html"><img class="icone-panier" src="images/icone panier.png" alt="icone de panier"></a>
+        </nav>
+        <div class="menu-mobile">
+            <nav class="menu-mobile2 flex-header">
+                <div class="menuBurger flex-header">
+                    <span></span>
+                    <ul class="menu-deroulant">
+                        <a href="#TouteCategorie.html">Catégories</a>
+                        <a href="#">A propos</a>
+                        <a href="#">Contact</a>
+                    </ul>
+                </div>
+                <a href="index.html"><img class="logo-mobile" src="images/JAC_logo.png" alt=""></a>
+                <div class="icone-mobile flex-header">
+                    <a href="#"><img src="images/icone recherche.png" alt="icone de recherche"></a>
+                    <a href="panier.html"><img class="icone-panier" src="images/icone panier.png" alt="icone de panier"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- MAIN -->
+    
+    <main class="container">
+        <h1> Catégorie Pantalons</h1>
+        <div class="caracteritic-box flex">
+            <fieldset>
+                <legend class="fieldset" >Choisissez les caractéristiques de votre pantalon: </legend>
+                <div >
+                    <label for="jeans">jeans</label>
+                    <input type="checkbox" id="jeans" name="jeans" checked>
+                </div>
+                <div >
+                    <label for="large">large</label>
+                    <input type="checkbox" id="large" name="large">
+                </div>      
+            </fieldset>
+            <select name="caracteristic">
+                <option value="">--TRI par défaut--</option>
+                <option value="popularity">Tri par popularité</option>
+                <option value="crescent ">Tri par tarif croissant</option>
+                <option value="decrescent">Tri par tarif decroissant</option>
+            </select>
+        </div>
+        <div class="container-box wrap">
+            <div class="Box">
+                <a href="produit.html"><img src="images/pantalon-large/khaki.webp" alt=" "></a>
+                <div class="category"> Categorie Pantalon</div>
+                <div class="name">Pantalon kaki</div>
+                <div class="price">12€</div>
+                <a class="test" href="panier.html"><button class="btn">Ajouter au panier</button></a>
+            </div>
+            <div class="Box">
+                <img src="images/pantalon-large/jean1.webp" alt=" ">
+                <div class="category"> Categorie Pantalon</div>
+                <div class="name">Pantalon jean</div>
+                <div class="price">11€</div>
+                <button class="btn">Ajouter au panier</button>
+            </div>
+            <div class="Box">
+                <img src="images/pantalon-large/black.webp" alt=" ">
+                <div class="category"> Categorie Pantalon</div>
+                <div class="name">Pantalon noir</div>
+                <div class="price">15€</div>
+                <button class="btn">Ajouter au panier</button>
+            </div>
+            <div class=" Box">
+                <img src="images/pantalon-large/khaki.webp" alt=" ">
+                <div class="category"> Categorie Pantalon</div>
+                <div class="name">Pantalon kaki</div>
+                <div class="price">14€</div>
+                <button class="btn">Ajouter au panier</button>
+            </div>
+            <div class=" Box">
+                <img src="images/pantalon-large/camel.webp" alt=" ">
+                <div class="category"> Categorie Pantalon</div>
+                <div class="name">Pantalon carmel</div>
+                <div class="price">13€</div>
+                <button class="btn">Ajouter au panier</button>
+            </div>
+            <div  class=" Box">
+                <img src="images/pantalon-large/cream.webp" alt=" ">
+                <p class="category"> Categorie Pantalon</p>
+                <p class="name">Pantalon crem</p>
+                <p class="price">12€</p>
+                <button class="btn">Ajouter au panier</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- FOOTER -->
+    
+    <footer>
+        <div class="footer-desktop flex-footer column"> 
+            <div class="newsletter-footer flex-footer column">
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Rejoignez notre communauté</p>
+                    <form>
+                        <input type="text" placeholder="Entrez votre email">
+                        <input class="violet" type="submit" value="OK">
+                    </form>
+                </div>
+                <div class="menu-footer flex-footer column">
+                    <h3>Menu</h3>
+                    <div class="lien-menu flex-footer column">
+                        <a href="index.html">Accueil</a>
+                        <a href="TouteCategorie.html">Catégories</a>
+                        <a href="#">A propos</a>
+                    </div>
+                </div>
+                <div class="legal-footer flex-footer column">
+                    <h3>Légal</h3>
+                    <div class="lien-legal flex-footer column">
+                        <a href="mentions-legales.html">Mentions légales</a>
+                        <a href="CGU-CGV.html">CGU-CGV</a>
+                        <a href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-bottom flex-footer">
+                <div class="reseaux flex-footer">
+                    <a href="#twitter"><img src="images/icone-twitter-bleue.png" alt="twitter"></a>
+                    <a href="#instagram"><img src="images/icone-ins-beue.png" alt="instagram"></a>
+                    <a href="snapchat"><img src="images/icone-snap-bleue.png" alt="snapchat"></a>
+                    <a href="facebook"><img src="images/icone-fb-bleue.png" alt="facebook"></a>
+                </div>
+                <div class="paiement">
+                    <img src="images/Paiement-Sécurisé-3CB.png" alt="paiment">
+                </div>
+            </div>
+            <div class="logo-footer flex-footer column">
+                <a href="index.html">
+                    <img src="images/JAC_logo-transparent-bordure-blanche.png" alt="logo"></a>
+                    <p>Copyright 2022</p>
+                </div>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+    </html>

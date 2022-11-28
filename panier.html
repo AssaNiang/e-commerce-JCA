@@ -5,53 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-panier.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="panier.css">
     <title>Panier</title>
 </head>
 
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header class="flex">
+        <a href="index.html">
+            <img class="logo menu-desktop" src="images/JAC_logo.png" alt="logo JAC">
+        </a>
 
-        <div class="header-ruban">
-            <p> Ruban informatif (optionel)</p>
-        </div>
-
-        <div class="header-nav flex">
-            <a href="index.html">
-                <img class="logo" src="images/Logo_ACJ-rose.png" alt="logo accueil">
+        <nav class="menu-desktop flex">
+            <a href="">
+                <img src="images/icone recherche.png" alt="icone de recherche">
             </a>
+            <a href="TouteCategorie.html">
+                Catégories
+            </a>
+            <a href="#">
+                A propos
+            </a>
+            <a href="#">
+                Contact
+            </a>
+            <a href="#">
+                <img class="icone-compte" src="images/icone mon compte.png" alt="icone de compte">
+            </a>
+            <a href="#">
+                <img class="icone-coeur" src="images/icone coeur.png" alt="icone de wishlist">
+            </a>
+            <a href="panier.html">
+                <img class="icone-panier" src="images/icone panier.png" alt="icone de panier">
+            </a>
+        </nav>
+        <div class="menu-mobile">
+            <nav class="menu-mobile2 flex">
+                <div class="menuBurger flex">
+                    <span></span>
+                    <ul class="menu-deroulant">
+                        <a href="TouteCategorie.html">Catégories</a>
+                        <a href="#">A propos</a>
+                        <a href="#">Contact</a>
+                    </ul>
+                </div>
 
-            <nav class="nav-menu flex">
-                <a href="#">Catégories</a>
-                <a href="#">A propos</a>
-                <a href="#">Contact</a>
+
+
+                <a href="index.html">
+                    <img class="logo-mobile" src="images/JAC_logo.png" alt="">
+                </a>
+
+                <div class="icone-mobile flex">
+                    <a href="#">
+                        <img src="images/icone recherche.png" alt="icone de recherche">
+                    </a>
+                    <a href="panier.html">
+                        <img class="icone-panier" src="images/icone panier.png" alt="icone de panier">
+                    </a>
+                </div>
             </nav>
 
-            <nav class="nav-icons flex">
-                <a href="#"><img src="images\icon-loupe-blanc.png" alt="icon recherche"></a>
-                <a href="#"><img src="images\icon-user-blanc.png" alt="icon compte"></a>
-                <a href="#"><img src="images\icon-coeur-blanc.png" alt="icon wishlist"></a>
-                <a href="#"><img src="images\icon-panier-blanc.png" alt="icon panier"></a>
-            </nav>
         </div>
-
-
     </header>
 
     <main>
 
 
-        <section id="panier-livraison" class="flex blue">
+        <section id="panier-livraison" class="flex">
             <div id="bloc-panier">
 
                 <h2>MON PANIER</h2>
 
                 <div class="sous-bloc-panier flex">
 
-                    <img class="image-article" src="images/pantalon-large/khaki.webp"
-                        alt="">
+                    <img class="image-article" src="images/pantalon-large/khaki.webp" alt="">
                     <div class="bloc-description-prix flex column">
                         <div class="description-article">
                             <p>Nom de l'article</p>
@@ -60,7 +94,8 @@
                         </div>
 
                         <div class="prix">
-                            <p class="prix-veste">80€</p>
+                            <p class="prix-veste violet">80€</p>
+                            <br>
                             <a href="#">Supprimer</a>
                         </div>
                     </div>
@@ -68,38 +103,42 @@
             </div>
 
 
-            <div id="bloc-livraison">
+            <div id="bloc-livraison flex">
 
                 <h2>LIVRAISON</h2>
+                <div class="sous-bloc-livraison flex">
 
-                <div class="sous-bloc-livraison flex column">
-                    <div class="etape-modalites flex column">
-                        <div class="flex">
-                            <form>
+
+                    <div class="flex column">
+                        <form class="modalites flex">
+                            <div class="domicile">
                                 <input class="checkbox-livraison" type="checkbox">
-                                <label type="text">Modalités</label>
-                            </form>
-                        </div>
-
-                        <a href="paiement.html">
-                            <button class="bouton-commander">COMMANDER</button>
-                        </a>
-
+                                <label type="text">A domicile</label>
+                            </div>
+                            <br>
+                            <div class="relais">
+                                <input class="checkbox-livraison" type="checkbox">
+                                <label type="text">Point relais</label>
+                            </div>
+                        </form>
                     </div>
-                    <div>
-                        <a href="#page-categorie">Continuez à shopper</a>
+                    <div class="commander-shopper flex">
+                        <a href="paiement.html">
+                            <button class="bouton-commander violet">COMMANDER</button>
+                        </a>
+                        <br>
+                        <a href="TouteCategorie.html">Continuez à shopper</a>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <div id="promo-total" class="blue">
+        <div id="promo-total">
             <div class="code-promo">
-                <h3>Code promo</h3>
+                <h2>CODE PROMO</h2>
                 <form class="flex">
                     <input type="text">
-                    <button type="submit">APPLIQUER</button>
+                    <button type="submit" class="violet">APPLIQUER</button>
                 </form>
             </div>
 
@@ -110,15 +149,15 @@
                     <tbody>
                         <tr>
                             <td>Sous-total</td>
-                            <td>125€</td>
+                            <td class="violet">125€</td>
                         </tr>
                         <tr>
                             <td>Livraison</td>
-                            <td>10€</td>
+                            <td class="violet">10€</td>
                         </tr>
                         <tr>
                             <td>Total</td>
-                            <td>135€</td>
+                            <td class="violet">135€</td>
                         </tr>
                     </tbody>
                 </table>
@@ -127,66 +166,76 @@
         </div>
 
     </main>
-    <!-- FOOTER  -->
-    <footer class="blue">
 
-        <div class="footer-top">
+<!-- FOOTER  -->
+<footer>
+    <div class="footer-desktop flex column">
 
-            <div class="footer-newsletter">
-
+        <div class="newsletter-footer flex column">
+            <div class="newsletter">
                 <h3>Newsletter</h3>
-                <p>Rejoignez notre communauté:</p>
+                <p class="white">Rejoignez notre communauté</p>
+                <br>
+                <form>
+                    <input type="text" placeholder="Entrez votre email">
+                    <input class="violet" type="submit" value="OK">
+                </form>
+            </div>
 
-                <div class="footer-input flex">
-                    <input type="email" placeholder="Entrez votre adresse email"></input>
-                    <button type="submit">OK</button>
+            <div class="menu-footer flex column">
+                <h3>Menu</h3>
+                <div class="lien-menu flex column">
+                    <a href="accueil.html">Accueil</a>
+                    <a href="TouteCategorie.html">Catégories</a>
+                    <a href="#">A propos</a>
+                </div>
+
+            </div>
+
+            <div class="legal-footer flex column">
+                <h3>Légal</h3>
+                <div class="lien-legal flex column">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="CGU-CGV.html">CGU-CGV</a>
+                    <a href="#">Politique de confidentialité</a>
                 </div>
             </div>
-
-            <div class="footer-legal">
-                <h3>Légal</h3>
-                <nav class="nav-legal">
-                    <a href="#">Mentions Légales</a>
-                    <a href="#">CGU-CGV</a>
-                    <a href="#">Politique de confidentialité</a>
-                    <a href="#">Politique de cookies</a>
-                </nav>
-            </div>
-
-            <div class="footer-menu">
-                <h3>Menu</h3>
-                <nav class="nav-bottom-menu">
-                    <a href="#">Accueil</a>
-                    <a href="#">Catégories</a>
-                    <a href="#">A propos</a>
-                    <a href="#">Contact</a>
-                </nav>
-            </div>
-
         </div>
 
-        <div class="footer-bottom">
-            <div class="flex reseaux">
-                <a href="#">
-                    <img src="images/icone-twitter-rose.png" alt="icone twitter">
+        <div class="menu-bottom flex">
+            <div class="reseaux flex">
+                <a href="#twitter">
+                    <img src="images/icone-twitter-bleue.png" alt="twitter">
                 </a>
-                <a href="#">
-                    <img src="images/icone-ins-rose.png" alt="icone instagram">
+                <a href="#instagram">
+                    <img src="images/icone-ins-beue.png" alt="instagram">
                 </a>
-                <a href="#">
-                    <img src="images/icone-snap-rose.png" alt="icone snapchat">
+                <a href="snapchat">
+                    <img src="images/icone-snap-bleue.png" alt="snapchat">
                 </a>
-                <a href="#">
-                    <img src="images/icone-fb-rose.png" alt="icone facebook">
+                <a href="facebook">
+                    <img src="images/icone-fb-bleue.png" alt="facebook">
                 </a>
             </div>
 
-            <img src="images/Paiement-Sécurisé-3CB.png" alt="icons moyens de paiement disponibles">
-            <br>
-            <h3>Copyright © 2022</h3>
+
+            <div class="paiement">
+                <img src="images/Paiement-Sécurisé-3CB.png" alt="paiment">
+            </div>
         </div>
+        <div class="logo-footer flex column">
+            <a href="index.html">
+                <img src="images/JAC_logo-transparent-bordure-blanche.png" alt="logo">
+            </a>
+
+            <p>Copyright 2022</p>
+        </div>
+    </div>
+    </div>
+
 
     </footer>
+    <script scr="main.js"></script>
 </body>
 
 </html>

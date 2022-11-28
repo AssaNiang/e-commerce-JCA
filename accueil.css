@@ -1,39 +1,30 @@
-/* GENERALITES  */
+/* STANDARD */
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
 }
 
-body {
-    margin: 20px auto 0;
+body{
+    /* font à déterminer */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-    --color-black: black;
-    --color-white: white;
-    --color-violet: #7461CC;
-    --color-jaune: #f5c24d;
+
+img{
+    max-width: 100%;
+    display: block;
 }
 
-.violet {
-    background-color: var(--color-violet);
+a{
+    text-decoration: none;
 }
 
-h2,
-a,
-label,
-button,
-p {
-    color: var(--color-black);
-    font-family: "Roboto", sans-serif;
-}
 
-h2 {
-    font-weight: normal;
-}
+
+
+/* CSS HEADER CYNTHIA */
 
 body {
     width: min(1196px, 100%);
@@ -44,6 +35,13 @@ main {
     gap: 25px;
 }
 
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-violet: #7461CC;
+    --color-blue: #32C4F6;
+    --color-jaune: #f5c24d;
+}
 .flex {
     display: flex;
 }
@@ -51,18 +49,6 @@ main {
 .column {
     flex-direction: column;
 }
-
-button,
-input[type=submit] {
-    cursor: pointer;
-}
-
-img {
-    display: block;
-}
-
-/*MAIN*/
-
 
 /*HEADER */
 
@@ -83,6 +69,7 @@ header nav a{
     text-decoration: none;
     font-weight: bold;
     text-align:center;
+    color: var(--color-violet);
     
 }
 header nav a:hover{
@@ -91,140 +78,180 @@ header nav a:hover{
 }
 header nav .icone-compte{
     width: 90%;
+
 }
-header nav .icone-coeur, .icone-panier{
+header nav .icone-coeur, header nav .icone-panier{
     width: 70%;
+ 
 }
-/* header .menuBurger{
-    display:none;
-} */
+
+
+
 header .menu-mobile{
     display: none;
 }
 
 
-/*FORMULAIRES */
 
-#formulaires {
-    width: 50%;
-    min-height: 40vw;
-    justify-content: space-between;
+
+
+/* FIN CSS HEADER CYNTHIA */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BANNIERE ACCUEIL */
+.banniere-bg{
+    background: url(images/place_holder_banniere.png) no-repeat center/cover;
+    height: 400px;
 }
 
-#formulaires div {
-    margin: 30px 50px;
-    border: var(--color-black) solid 1px;
+
+/* BIENVENUE SUR NOTRE E-SHOP */
+#bienvenue{
+
+    height: auto;
+    margin: 20px 0;
+    display: flex;
 }
 
-#formulaires form {
-    margin: 50px 20px;
-}
-
-#formulaires form input {
-    padding: 10px;
-    margin: 5px;
-    font-size: 18px;
-    border: black solid 1px;
-}
-
-#formulaires form .bouton-validation {
-    width: 50%;
-    margin: 30px auto 10px;
-    color: var(--color-white);
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-
-}
-
-#formulaires form .bouton-validation:hover {
-    background-color: var(--color-jaune);
-    color: var(--color-black);
-
-}
-
-#formulaires form label {
-    margin: 5px;
-    font-size: 18px;
-}
-
-#formulaires .bouton {
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-    font-size: 25px;
-    border: none;
-    background-color: white;
-
-}
-
-input[type=submit] {
-    border-radius: 10%;
-
-}
-
-#bancaire .date-cvc {
-    border: none;
-    margin: 0;
-    padding: 10px;
-}
-
-#bancaire .date,
-.cvc {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-#bancaire .cvc {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-#bancaire form .cvc input {
-    width: 100px;
-}
-
-/*PANIER */
-
-.recap-panier {
+#bienvenue img, #concept img{
     height: 40%;
-    margin: 30px 0;
-    margin-left: 20px;
-    width: 50%;
-    border: black solid 1px;
+    width: 40%;
 }
 
-.recap-panier .sous-bloc-panier {
+.bienvenue-container, .concept-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 40px;
 }
 
-.recap-panier h2 {
-    margin: 20px;
+.bienvenue-texte, .concept-texte{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }
 
-.recap-panier img {
-    width: 40%;
-    margin-right: 20px;
-    border: var(--color-black) solid 1px;
+.bienvenue-texte h1, .concept-texte h2{
+    color: var(--color-violet);
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px 0;
 }
 
-.bloc-description-prix {
-    width: 50%;
-    justify-content: space-between;
+.bienvenue-texte p, .concept-texte p{
+    color: var(--color-black);
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.recap-panier .sous-bloc-panier p{
-    color : var(--color-black);
-    font-size: 18px;
+.bienvenue-bouton button{
+    background-color: var(--color-violet);
+    color: var(--color-white);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.recap-panier .prix-veste {
+.bienvenue-bouton button:hover{
+    background-color: var(--color-blue);
+}
+
+.bienvenue-bouton a{
+    color: var(--color-white);
+}
+
+
+/* CONCEPT */
+
+#concept{
+    height: auto;
+    margin: 20px 0;
+    display: flex;
+}
+
+
+
+
+/* BEST-SELLERS CATEGORIES */
+
+#categories{
+    height: auto;
+}
+
+#categories h2{
     color: var(--color-violet);
 }
 
-/* FOOTER */
+h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.categories-bestsellers img{
+    height: 200px;
+    width: 200px;
+    margin: 30px 0 50px;
+}
+
+.categories-bestsellers{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* ACTUALITES */
+
+#actualite{
+    height: auto;
+}
+
+#actualite h2{
+    color: var(--color-violet);
+}
+
+.actualite-contenu{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER CYNTHIA */
 
 footer .footer-mobile{
     display:none;
@@ -237,7 +264,7 @@ footer h3{
     font-size: 20px;
     color: white;
 }
-footer a, p{
+footer a, p, input{
     text-decoration: none;
     color: white;
     font-size: 15px;
@@ -246,10 +273,6 @@ footer a, p{
 }
 footer input{
  color: black;
- text-decoration: none;
- font-size: 15px;
- padding: 10px;
- border: none;
 }
 
 footer input[type="submit"]{
@@ -289,7 +312,9 @@ footer .footer-desktop .reseaux a{
     margin: 0;
     padding: 0;
 }
-    
+footer .footer-desktop .reseaux a img{
+    width: 70%;
+}    
 footer .footer-desktop .menu-bottom .paiement{
     width: 30%;
 }
@@ -304,41 +329,89 @@ footer .footer-desktop .logo-footer a img{
     width: 30%;
     margin: 0 auto;
 }
-footer .footer-desktop .reseaux a img{
-    width: 70%;
-}
 
-/* VERSION MOBILE */
 
-@media (max-width:900px) {
-    main {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*VERSION MOBILE */
+
+@media (max-width:900px){
+
+
+    #bienvenue, #concept, .categories-bestsellers{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #concept{
         flex-direction: column-reverse;
-        margin: 80px 0;
-        border: none;
     }
 
-    #formulaires,
-    .recap-panier {
-        width: 100%;
-        margin: 20px 0;
+    #bienvenue img, #concept img{
+        width: 80%;
     }
 
-    #formulaires div {
-        margin: 20px 0;
+    #categories img{
+        width: 70%;
+        height: 70%;
     }
 
-    .recap-panier img {
-        width: 20%;
+    .bienvenue-container{
+        padding: 40px;
     }
-
-    /* MENU BURGER */
     
+    .bienvenue-texte{
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .actualite-video{
+        width: 80%;
+        height: 80%;
+    }
+
+
+
+
+
+
+
+
+
+
+/* MENU BURGER */
+
     header .menu-desktop{
         display:none;
     }
+
     header .menuBurger{
-    display:block;
-} 
+        display:block;
+    } 
     header .menuBurger {
         display: block;
         width: 50px;
@@ -347,31 +420,31 @@ footer .footer-desktop .reseaux a img{
         position: relative;
         left: 0;
     }
-  header .menu-mobile{
-  width: 90%;
-  margin: 0 auto;
-  display:block;
-  flex-direction:row;
-  }
-  header .menu-mobile2{
+    header .menu-mobile{
+    width: 90%;
+    margin: 0 auto;
+    display:block;
+    flex-direction:row;
+    }
+    header .menu-mobile2{
     display:flex;
     width: 100%;
     justify-content: space-between;
-}
-
-  header .logo-mobile{
+    }
+    
+    header .logo-mobile{
     width: 30%;
     margin: 0 auto;
-  }
-  
-  header .menu-mobile .icone-mobile{
+    }
+    
+    header .menu-mobile .icone-mobile{
     margin: 0 20px;
     flex-direction: row;
-  }
-  header .menu-mobile .icone-mobile .icone-panier{
+    }
+    header .menu-mobile .icone-mobile .icone-panier{
     margin: 0 20px;
     
-  }
+    }
     header .menuBurger span {
         width: 100%;
         height: 6px;
@@ -383,7 +456,7 @@ footer .footer-desktop .reseaux a img{
         transform: translateY(-50%);
         transition: background-color 0.5s ease-in-out;
     }
-
+    
     header .menuBurger span::before,
     header .menuBurger span::after {
         content: "";
@@ -394,38 +467,41 @@ footer .footer-desktop .reseaux a img{
         background-color: var(--color-violet);
         transition: transform 0.5s ease-in-out;
     }
-
+    
     header .menuBurger span::before {
         transform: translateY(-10px);
     }
-
+    
     header .menuBurger span::after {
         transform: translateY(10px);
     }
-
+    
     header .menuBurger.active span {
         background-color: transparent;
     }
-
+    
     header .menuBurger.active span::before {
         transform: translateY(0px) rotateZ(45deg);
     }
-
+    
     header .menuBurger.active span::after {
         transform: translateY(0px) rotateZ(-45deg);
     }
-
+    
     header .menuBurger .menu-deroulant {
         display: none;
     }
+ 
+    
 
-    /*FOOTER */
+    /* RESPONSIVE FOOTER CYNTHIA*/
 
 
-      footer .footer-desktop h3{
+        footer .footer-desktop h3{
         display:none;
     }
     footer .footer-desktop .lien-menu{
         display:none;
     }
+
 }

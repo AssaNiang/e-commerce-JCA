@@ -6,86 +6,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="paiement.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="paiement.css">
     <title>Paiement</title>
 </head>
 
-<body class="pink">
+<body>
 
-     <!-- HEADER -->
-     <header>
+    <!-- HEADER -->
 
-        <div class="header-ruban">
-            <p> Ruban informatif (optionel)</p>
-        </div>
+    <header class="flex">
+        <a href="index.html">
+            <img class="logo menu-desktop" src="images/JAC_logo.png" alt="logo JAC">
+        </a>
 
-        <div class="header-nav flex">
-            <a href="index.html">
-                <img class="logo" src="images/Logo_ACJ-rose.png" alt="logo accueil">
+        <nav class="menu-desktop flex">
+            <a href="">
+                <img src="images/icone recherche.png" alt="icone de recherche">
             </a>
+            <a href="TouteCategorie.html">
+                Catégories
+            </a>
+            <a href="#">
+                A propos
+            </a>
+            <a href="#">
+                Contact
+            </a>
+            <a href="#">
+                <img class="icone-compte" src="images/icone mon compte.png" alt="icone de compte">
+            </a>
+            <a href="#">
+                <img class="icone-coeur" src="images/icone coeur.png" alt="icone de wishlist">
+            </a>
+            <a href="panier.html">
+                <img class="icone-panier" src="images/icone panier.png" alt="icone de panier">
+            </a>
+        </nav>
+        <div class="menu-mobile">
+            <nav class="menu-mobile2 flex">
+                <div class="menuBurger flex">
+                    <span></span>
+                    <ul class="menu-deroulant">
+                        <a href="TouteCategorie.html">Catégories</a>
+                        <a href="#">A propos</a>
+                        <a href="#">Contact</a>
+                    </ul>
+                </div>
 
-            <nav class="nav-menu flex">
-                <a href="#">Catégories</a>
-                <a href="#">A propos</a>
-                <a href="#">Contact</a>
+
+
+                <a href="index.html">
+                    <img class="logo-mobile" src="images/JAC_logo.png" alt="">
+                </a>
+
+                <div class="icone-mobile flex">
+                    <a href="#">
+                        <img src="images/icone recherche.png" alt="icone de recherche">
+                    </a>
+                    <a href="panier.html">
+                        <img class="icone-panier" src="images/icone panier.png" alt="icone de panier">
+                    </a>
+                </div>
             </nav>
 
-            <nav class="nav-icons flex">
-                <a href="#"><img src="images\icon-loupe-blanc.png" alt="icon recherche"></a>
-                <a href="#"><img src="images\icon-user-blanc.png" alt="icon compte"></a>
-                <a href="#"><img src="images\icon-coeur-blanc.png" alt="icon wishlist"></a>
-                <a href="#"><img src="images\icon-panier-blanc.png" alt="icon panier"></a>
-            </nav>
         </div>
-
 
     </header>
 
-    <main class="flex pink">
+    <main class="flex">
         <div id="formulaires" class="flex column">
-            <div id="identite" class="blue">
+            <div id="identite">
 
-                <button class="bouton formulaire-coordonnees blue">MES COORDONNEES</button>
+                <button class="bouton formulaire-coordonnees">MES COORDONNEES</button>
                 <form class="flex column">
-                    <label for="name">Nom</label>
+                    <label for="name">Nom*</label>
                     <input type="text">
-                    <label for="name">Prénom</label>
+                    <label for="name">Prénom*</label>
                     <input type="text">
-                    <label for="email">Email</label>
+                    <label for="email">Email*</label>
                     <input type="email">
-                    <label for="telephone">Numéro de téléphone</label>
+                    <label for="telephone">Numéro de téléphone (facultatif)</label>
                     <input type="tel" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
-                    <input class=" bouton-validation pink" type="submit" value="Enregistrer & continuer">
+                    <input class=" bouton-validation violet" type="submit" value="Enregistrer & continuer">
                 </form>
             </div>
 
-            <div id="livraison" class="blue">
+            <div id="livraison">
                 <button class="bouton formulaire-livraison">LIVRAISON</button>
                 <form class="flex column">
-                    <label for="Adresse">Adresse</label>
+                    <label for="Adresse">Adresse*</label>
                     <input type="text">
                     <label for="complement">Compléments</label>
                     <input type="text">
-                    <label for="code">Code postal</label>
+                    <label for="code">Code postal*</label>
                     <input type="text">
-                    <label for="ville">Ville</label>
+                    <label for="ville">Ville*</label>
                     <input type="text">
-                    <input class="bouton-validation pink" type="submit" value="Enregistrer & continuer">
+                    <input class="bouton-validation violet" type="submit" value="Enregistrer & continuer">
                 </form>
             </div>
 
-            <div id="bancaire" class="blue">
+            <div id="bancaire">
 
                 <button class="bouton formulaire-commander">COMMANDER</button>
                 <form class="flex column">
-                    <label for="Nom">Nom du titulaire de la carte</label>
+                    <label for="Nom">Nom du titulaire de la carte*</label>
                     <input type="text">
-                    <label for="Numero">Numéro de la carte</label>
+                    <label for="Numero">Numéro de la carte*</label>
                     <input type="text">
-                    <label for="date">Date d'expiration</label>
-                    <input type="date">
-                    <label for="ville">Code</label>
-                    <input type="text">
-                    <input class="bouton-validation pink" type="submit" value="Commander">
+                    <div class="date-cvc flex">
+                        <div class="date">
+                            <label for="date">Date*</label>
+                            <input type="date">
+                        </div>
+                        <div class="cvc">
+                            <label for="ville">CVC*</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+
+                    <input class="bouton-validation violet" type="submit" value="Commander">
                 </form>
             </div>
 
@@ -94,14 +140,13 @@
 
 
 
-        <div class="recap-panier blue">
+        <div class="recap-panier">
 
             <h2>MON PANIER</h2>
 
             <div class="sous-bloc-panier flex">
 
-                <img class="image-article"
-                    src="images/pantalon-large/khaki.webp" alt="">
+                <img class="image-article" src="images/pantalon-large/khaki.webp" alt="">
                 <div class="bloc-description-prix flex column">
                     <div class="description-article">
                         <p>Nom de l'article</p>
@@ -121,11 +166,73 @@
 
 
     </main>
-
+    <!-- FOOTER  -->
     <footer>
+        <div class="footer-desktop flex column">
 
-        <p>FOOTER</p>
+            <div class="newsletter-footer flex column">
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Rejoignez notre communauté</p>
+                    <form>
+                        <input type="text" placeholder="Entrez votre email">
+                        <input class="violet" type="submit" value="OK">
+                    </form>
+                </div>
+
+                <div class="menu-footer flex column">
+                    <h3>Menu</h3>
+                    <div class="lien-menu flex column">
+                        <a href="index.html">Accueil</a>
+                        <a href="TouteCategorie.html">Catégories</a>
+                        <a href="#">A propos</a>
+                    </div>
+
+                </div>
+
+                <div class="legal-footer flex column">
+                    <h3>Légal</h3>
+                    <div class="lien-legal flex column">
+                        <a href="mentions-legales.html">Mentions légales</a>
+                        <a href="CGU-CGV.html">CGU-CGV</a>
+                        <a href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-bottom flex">
+                <div class="reseaux flex">
+                    <a href="#twitter">
+                        <img src="images/icone-twitter-bleue.png" alt="twitter">
+                    </a>
+                    <a href="#instagram">
+                        <img src="images/icone-ins-beue.png" alt="instagram">
+                    </a>
+                    <a href="snapchat">
+                        <img src="images/icone-snap-bleue.png" alt="snapchat">
+                    </a>
+                    <a href="facebook">
+                        <img src="images/icone-fb-bleue.png" alt="facebook">
+                    </a>
+                </div>
+
+
+                <div class="paiement">
+                    <img src="images/Paiement-Sécurisé-3CB.png" alt="paiment">
+                </div>
+            </div>
+            <div class="logo-footer flex column">
+                <a href="index.html">
+                    <img src="images/JAC_logo-transparent-bordure-blanche.png" alt="logo">
+                </a>
+
+                <p>Copyright 2022</p>
+            </div>
+        </div>
+        </div>
+
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>

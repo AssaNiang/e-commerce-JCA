@@ -4,68 +4,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    /* font à déterminer */
     font-family: "Roboto", sans-serif;
+        width: min(1196px,100%);
+        margin: 20px auto 0;
 }
 
-body {
-    margin: 20px auto 0;
+:root{
+    /* programmation de variables pour les éléments qui se répètent */
+    --color-jaune : #f5c24d;
+    --color-violet : #7461CC;
+    --color-bleu : #32C4F6;
+    --color-white: #fff;
+    --color-black: #000;
 }
-
-:root {
-    --color-black: black;
-    --color-white: white;
-    --color-violet: #7461CC;
-    --color-jaune: #f5c24d;
+p{
+    font-family: muli, sans-serif;
+    font-size: 18px;
 }
-
-.violet {
+a, p, h1, label, td, button{
+    color: var(--color-black);
+}
+a:hover{
+    color:var(--color-jaune);
+}
+button{
     background-color: var(--color-violet);
 }
-
-h2,
-a,
-label,
-button,
-p {
-    color: var(--color-black);
-    font-family: "Roboto", sans-serif;
+.bleu {
+ background-color: var(--color-bleu);
 }
-
-h2 {
-    font-weight: normal;
+.violet {
+    color: var(--color-violet);
 }
-
-body {
-    width: min(1196px, 100%);
-    margin: 20px auto 0;
+.white {
+    color: var(--color-white);
 }
-
-main {
-    gap: 25px;
-}
-
-.flex {
-    display: flex;
-}
-
-.column {
-    flex-direction: column;
-}
-
-button,
-input[type=submit] {
-    cursor: pointer;
-}
-
-img {
-    display: block;
-}
-
-/*MAIN*/
-
+ .flex{
+    display:flex;
+ }
 
 /*HEADER */
-
 
 header{
     margin-bottom: 150px;
@@ -101,128 +82,153 @@ header nav .icone-coeur, .icone-panier{
 header .menu-mobile{
     display: none;
 }
+/* MAIN */
 
 
-/*FORMULAIRES */
-
-#formulaires {
-    width: 50%;
-    min-height: 40vw;
-    justify-content: space-between;
+h1, h2, h3,p, a, input {
+    font-family: 'Roboto', sans-serif;
 }
-
-#formulaires div {
-    margin: 30px 50px;
-    border: var(--color-black) solid 1px;
+h1 {
+    text-align: center;
 }
-
-#formulaires form {
-    margin: 50px 20px;
+h2{
+    font-size: 25px;
 }
-
-#formulaires form input {
-    padding: 10px;
-    margin: 5px;
+h2, h3 {
+    margin-bottom: 20px;
+    color: var(--color-black);
+}
+a, td, label, p{
     font-size: 18px;
-    border: black solid 1px;
+}
+p {
+    color: black;
+}
+.flex {
+    display: flex;
 }
 
-#formulaires form .bouton-validation {
-    width: 50%;
-    margin: 30px auto 10px;
-    color: var(--color-white);
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-
+.column {
+    flex-direction: column; 
 }
-
-#formulaires form .bouton-validation:hover {
+button{
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
     background-color: var(--color-jaune);
     color: var(--color-black);
-
 }
 
-#formulaires form label {
-    margin: 5px;
-    font-size: 18px;
+/* SECTION PANIER LIVRAISON */
+
+#panier-livraison{
+    gap: 40px;
+    border:var(--color-violet) solid 2px;
+}
+#panier-livraison a{
+    text-decoration-color: #7461CC;
 }
 
-#formulaires .bouton {
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-    font-size: 25px;
-    border: none;
-    background-color: white;
+/*BLOC PANIER */
 
+#panier-livraison, #promo-total{
+    min-height: 100px;
+    margin: 50px auto;
+    padding: 50px;
+}
+#panier-livraison h2{
+    margin-bottom: 70px;
+}
+#bloc-panier {
+    border-right: var(--color-violet) solid 1px;
 }
 
-input[type=submit] {
-    border-radius: 10%;
-
-}
-
-#bancaire .date-cvc {
-    border: none;
-    margin: 0;
-    padding: 10px;
-}
-
-#bancaire .date,
-.cvc {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-#bancaire .cvc {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-#bancaire form .cvc input {
-    width: 100px;
-}
-
-/*PANIER */
-
-.recap-panier {
-    height: 40%;
-    margin: 30px 0;
-    margin-left: 20px;
-    width: 50%;
-    border: black solid 1px;
-}
-
-.recap-panier .sous-bloc-panier {
-    padding: 40px;
-}
-
-.recap-panier h2 {
-    margin: 20px;
-}
-
-.recap-panier img {
-    width: 40%;
-    margin-right: 20px;
-    border: var(--color-black) solid 1px;
-}
-
+#bloc-panier .image-article{
+    border: var(--color-black) solid 2px;
+    margin-right: 40px;
+}  
 .bloc-description-prix {
-    width: 50%;
     justify-content: space-between;
+    width: 50%;
 }
 
-.recap-panier .sous-bloc-panier p{
-    color : var(--color-black);
+/*  BLOC LIVRAISON */
+
+.sous-bloc-livraison{
+    flex-direction :column;
+    justify-content:space-between;
+    height: 80%;
+}
+.sous-bloc-livraison .modalites{
+    flex-direction: column;
+    
+}
+.modalites .checkbox-livraison{
+    margin-right: 10px;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 3px solid var(--color-black);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}   
+.checkbox-livraison:checked{
+        background-color: var(--color-violet);
+}
+.commander-shopper{
+    flex-direction: column;
+}
+.bouton-commander{
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10%;
+}
+
+
+
+/*CODE PROMO */
+#promo-total{
+    margin-top:150px;
+}
+#promo-total hr{
+    margin: 80px 0;
+    border: var(--color-violet) solid 1px;
+}
+#promo-total h3{
+    margin-bottom: 50px;
+}
+#promo-total form{
+    gap: 30px;
+}
+#promo-total form input{
+    padding:8px;
+    border: black solid 2px;
+    background-color: var(--color-white);
     font-size: 18px;
+    color: black;
+}
+#promo-total form button{
+    padding:15px 30px;
+    color: white;
+    border-radius: 10%;
+    border: none;
+}
+#promo-total form button:hover{
+color: black;
+}
+#montant-panier table tbody tr td{
+    padding: 10px 180px 10px 0;
+    text-align: right;
 }
 
-.recap-panier .prix-veste {
-    color: var(--color-violet);
-}
+
+/* FOOTER */
 
 /* FOOTER */
 
@@ -237,7 +243,7 @@ footer h3{
     font-size: 20px;
     color: white;
 }
-footer a, p{
+footer a,input{
     text-decoration: none;
     color: white;
     font-size: 15px;
@@ -246,10 +252,6 @@ footer a, p{
 }
 footer input{
  color: black;
- text-decoration: none;
- font-size: 15px;
- padding: 10px;
- border: none;
 }
 
 footer input[type="submit"]{
@@ -260,8 +262,9 @@ footer input[type="submit"]{
 footer h3{
     margin-bottom:25px;
 }
-footer .newsletter-footer a, p{
+footer .newsletter-footer a{
     margin: 10px 0;
+    color:white;
 }
 footer .newsletter-footer a:hover{
     color: var(--color-jaune);
@@ -285,11 +288,13 @@ footer .footer-desktop .reseaux{
     align-items: center;
 }
 footer .footer-desktop .reseaux a{
-    width:80%;
     margin: 0;
     padding: 0;
 }
-    
+footer .footer-desktop .reseaux a img{
+    width: 70%;
+}
+
 footer .footer-desktop .menu-bottom .paiement{
     width: 30%;
 }
@@ -301,37 +306,47 @@ footer .footer-desktop .logo-footer{
     margin-top: 50px;
 }
 footer .footer-desktop .logo-footer a img{
-    width: 30%;
+    display: block;
     margin: 0 auto;
-}
-footer .footer-desktop .reseaux a img{
-    width: 70%;
+    width: 30%;
 }
 
 /* VERSION MOBILE */
 
-@media (max-width:900px) {
-    main {
-        flex-direction: column-reverse;
-        margin: 80px 0;
+@media (max-width:900px){
+    #bloc-panier{
+        border: var(--color-violet) solid 1px;
+    }
+    #panier-livraison h2 {
+        padding-left: 20px;
+    }
+    #bloc-panier .sous-bloc-panier{
+        padding: 30px;
+        margin-bottom:30px;
+    }
+    #bloc-panier .sous-bloc-panier img{
+        width: 30%;
+    }
+    #panier-livraison{
+        flex-direction: column;
         border: none;
     }
-
-    #formulaires,
-    .recap-panier {
-        width: 100%;
-        margin: 20px 0;
+    #panier-livraison h2{
+        margin-top: 60px;
     }
-
-    #formulaires div {
-        margin: 20px 0;
+    #panier-livraison #bloc-panier h2 {
+        margin-bottom: 40px;
     }
-
-    .recap-panier img {
-        width: 20%;
+    .sous-bloc-livraison{
+        padding-left: 30px;
     }
-
-    /* MENU BURGER */
+    .sous-bloc-livraison .modalites{
+        margin-bottom: 50px;
+    }
+    #promo-total{
+        margin : 0 40px;
+    }
+/* MENU BURGER */
     
     header .menu-desktop{
         display:none;
@@ -361,7 +376,7 @@ footer .footer-desktop .reseaux a img{
 
   header .logo-mobile{
     width: 30%;
-    margin: 0 auto;
+    margin-left:80px;
   }
   
   header .menu-mobile .icone-mobile{
@@ -421,11 +436,11 @@ footer .footer-desktop .reseaux a img{
 
     /*FOOTER */
 
-
-      footer .footer-desktop h3{
+    footer .footer-desktop h3{
         display:none;
     }
     footer .footer-desktop .lien-menu{
         display:none;
     }
 }
+
